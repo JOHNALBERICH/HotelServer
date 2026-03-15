@@ -1,4 +1,4 @@
-package com.hotel.hotelserver.dto;
+package com.hotel.hotelserver.dto.Response;
 
 public class UserResponse {
     private Long userId;

@@ -1,5 +1,6 @@
 package com.hotel.hotelserver.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -38,20 +39,20 @@ public class Hotel {
     private User createdby;
 
     @Column(name="created_at",updatable=false)
-    private LocalDateTime createdat;
+    private LocalDate createdat;
 
     @Column(name="updated_at")
-    private LocalDateTime updatedat;
+    private LocalDate updatedat;
     @PrePersist
     protected void onCreate()
     {
-        this.createdat = LocalDateTime.now();
-        this.updatedat = LocalDateTime.now();
+        this.createdat = LocalDate.now();
+        this.updatedat = LocalDate.now();
     }
     @PreUpdate
     protected void onUpdate()
     {
-        this.updatedat = LocalDateTime.now();
+        this.updatedat = LocalDate.now();
     }
     @Column(name="is_active")
     private boolean active=true;

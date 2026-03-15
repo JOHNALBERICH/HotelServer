@@ -1,5 +1,6 @@
 package com.hotel.hotelserver.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;

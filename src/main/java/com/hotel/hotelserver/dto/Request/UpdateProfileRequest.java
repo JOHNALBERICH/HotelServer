@@ -1,6 +1,6 @@
-package com.hotel.hotelserver.dto;
+package com.hotel.hotelserver.dto.Request;
 
-public class RegisterRequest {
+public class UpdateProfileRequest {
     private String useName;
     private String Phone;
     private String Email;

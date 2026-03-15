@@ -1,6 +1,5 @@
 package com.hotel.hotelserver.controller;
 
-import com.hotel.hotelserver.dto.RegisterRequest;
 import com.hotel.hotelserver.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +14,10 @@ public class UserController {
         this.repository = repository;
     }
 
-    @PostMapping("/register")
-    public ResponseEntity<?> Register(@RequestBody RegisterRequest registerRequest)
+    @GetMapping("/Hello")
+    public ResponseEntity<?>TestApi()
     {
-        return ResponseEntity.ok(200);
+        return ResponseEntity.ok("This is testapi");
     }
+
 }

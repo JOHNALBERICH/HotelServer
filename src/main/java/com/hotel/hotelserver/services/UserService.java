@@ -1,9 +1,9 @@
 package com.hotel.hotelserver.services;
 
-import com.hotel.hotelserver.dto.LoginRequest;
-import com.hotel.hotelserver.dto.RegisterRequest;
-import com.hotel.hotelserver.dto.UpdateProfileRequest;
-import com.hotel.hotelserver.dto.UserResponse;
+import com.hotel.hotelserver.dto.Request.LoginRequest;
+import com.hotel.hotelserver.dto.Request.RegisterRequest;
+import com.hotel.hotelserver.dto.Request.UpdateProfileRequest;
+import com.hotel.hotelserver.dto.Response.UserResponse;
 
 public interface UserService {
     UserResponse Register(RegisterRequest registerRequest);

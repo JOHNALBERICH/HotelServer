@@ -1,6 +1,7 @@
 package com.hotel.hotelserver.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -36,10 +37,10 @@ public class Booking {
     private Room room;
 
     @Column(name="check_in",nullable=false)
-    private LocalDateTime checkin;
+    private LocalDate checkin;
 
     @Column(name="check_out",nullable=false)
-    private LocalDateTime checkout;
+    private LocalDate checkout;
 
     @Column(nullable=false,precision=10,scale=2)
     private BigDecimal totalprice;
@@ -49,12 +50,12 @@ public class Booking {
     private Status status;
 
     @Column(name="created_at",updatable=false)
-    private LocalDateTime createdat;
+    private LocalDate createdat;
 
     @PrePersist
     protected void onCreate()
     {
-        this.createdat = LocalDateTime.now();
+        this.createdat = LocalDate.now();
         if(this.status == null)
         {
             this.status = Status.PENDING;

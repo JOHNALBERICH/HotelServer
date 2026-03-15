@@ -1,6 +1,7 @@
 package com.hotel.hotelserver.entity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
@@ -45,6 +46,7 @@ public class Payment {
 
     @Column(name="created_at",updatable=false)
     private LocalDateTime createat;
+
 
     @PrePersist
     protected void onCreate()
